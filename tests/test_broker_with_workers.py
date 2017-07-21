@@ -16,13 +16,13 @@ def test_spawn_broker_worker_post_two_works(broker, worker_1):
     assert 'cool' in work['events'][2]['context']['output']
 
 
-def test_spawn_broker_three_workers_post_multiple_works(broker, client):
+def test_spawn_broker_three_workers_post_multiple_works(client, network, broker):
     with auto_remove_multiple([
-        create_worker(client, broker),
-        create_worker(client, broker),
-        create_worker(client, broker)
+        create_worker(client, network),
+        create_worker(client, network),
+        create_worker(client, network)
     ]) as workers_containers:
-        number_of_works = 10
+        number_of_works = 15
         work_ids = [post_work('ls') for i in range(0, number_of_works)]
         responses = [
             get_work_after_it_finishes(work_id)

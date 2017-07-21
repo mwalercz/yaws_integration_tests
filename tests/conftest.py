@@ -2,8 +2,9 @@ from time import sleep
 
 import docker
 import pytest
+import uuid
 
-from tests.utils import auto_remove
+from tests.utils import auto_remove_network, auto_remove
 
 
 @pytest.fixture
@@ -12,7 +13,18 @@ def client():
 
 
 @pytest.yield_fixture
-def postgres(client):
+def network(client):
+    with auto_remove_network(
+            client.networks.create(
+                name=str(uuid.uuid4()),
+                driver='bridge'
+            )
+    ) as n:
+        yield n
+
+
+@pytest.yield_fixture
+def postgres(client, network):
     with auto_remove(
             client.containers.run(
                 'postgres:9.2-alpine',
@@ -26,42 +38,51 @@ def postgres(client):
                 detach=True
             )
     ) as c:
+        network.connect(c, aliases=['postgres'])
         sleep(3)
         yield c
 
 
 @pytest.yield_fixture
-def broker(client, postgres):
+def broker(client, postgres, network):
     with auto_remove(
-            create_broker(client, postgres)
+            create_broker(client, postgres, network)
     ) as c:
         sleep(2)
         yield c
 
 
 @pytest.yield_fixture
-def worker_1(client, broker):
+def worker_1(client, network):
     with auto_remove(
-            create_worker(client, broker)
+            create_worker(client, network)
     ) as c:
         yield c
 
 
-def create_worker(client, broker):
-    return client.containers.run(
+def create_worker(client, network):
+    container = client.containers.run(
         'mwalercz/dq_worker',
-        links=[(broker.name, 'broker')],
-        hostname='worker',
+        command='worker -c env.ini',
+        environment={
+            'BROKER_HOSTNAME': 'wss://broker:9000'
+        },
         detach=True,
     )
+    network.connect(container)
+    return container
 
 
-def create_broker(client, postgres):
-    return client.containers.run(
+def create_broker(client, postgres, network):
+    broker = client.containers.run(
         'mwalercz/dq_broker',
-        command='broker -c docker.ini',
-        hostname='broker',
+        command='broker -c env.ini',
+        environment={
+            'BROKER_DATABASE_HOSTNAME': 'postgres'
+        },
         ports={'9001/tcp': ('127.0.0.1', 9001)},
-        links=[(postgres.name, 'postgres')],
         detach=True,
+        hostname='broker',
     )
+    network.connect(broker, aliases=['broker'])
+    return broker

@@ -6,11 +6,11 @@ from tests.conftest import create_worker
 from tests.utils import auto_remove
 
 
-def test_create_work_kill_worker_add_worker(client, broker):
-    with auto_remove(create_worker(client, broker)):
+def test_create_work_kill_worker_add_worker(client, broker, network):
+    with auto_remove(create_worker(client, network)):
         work_id = post_work(command='python 5_sec_loop.py', cwd=TEST_WORKS_DIR)
 
-    with auto_remove(create_worker(client, broker)):
+    with auto_remove(create_worker(client, network)):
         sleep(7)
 
     work = get_user_work(work_id)
