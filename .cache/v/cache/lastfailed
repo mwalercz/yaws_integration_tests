@@ -1,0 +1,4 @@
+{
+  "tests/test_broker_with_workers.py::test_spawn_broker_worker_post_two_works": true,
+  "tests/test_creating_and_killing_workers.py::test_create_work_kill_worker_add_worker": true
+}
