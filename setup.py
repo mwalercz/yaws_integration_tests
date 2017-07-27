@@ -21,7 +21,6 @@ setup(
     version="0.0.1",
     author="Maciej Walerczuk",
     author_email="mwalerczuk@gmail.com",
-    description="dq_broker",
     license="BSD",
     include_package_data=True,
     tests_require=read_requirements('requirements.txt'),

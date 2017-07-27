@@ -1,8 +1,5 @@
-from tests.api import make_request
-
-
-def test_broker_is_responding(postgres, broker, network):
-    response = make_request(
+def test_broker_is_responding(postgres, broker, network, broker_client):
+    response = broker_client.make_request(
         'GET',
         '/users/test/works',
     )
