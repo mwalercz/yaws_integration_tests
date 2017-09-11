@@ -2,6 +2,7 @@ from time import sleep
 
 from docker import APIClient
 from docker.errors import APIError
+from requests.exceptions import SSLError
 
 
 def wait_for_postgres(container, timeout=20, delay=1):
@@ -32,7 +33,7 @@ def wait_for_broker(container, timeout=20, delay=1):
             else:
                 print(b'Waiting for broker: ' + response)
                 sleep(delay)
-        except APIError as exc:
+        except (APIError, SSLError) as exc:
             print(exc)
             sleep(delay)
     raise Exception('Timeout. Broker not responding.')

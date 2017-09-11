@@ -1,18 +1,6 @@
 TIMEOUT = 2
 
 
-class auto_remove_network:
-    def __init__(self, network):
-        self.network = network
-
-    def __enter__(self):
-        return self.network
-
-    def __exit__(self, exc_type, exc_val, exc_tb):
-        if self.network:
-            self.network.remove()
-
-
 class auto_remove:
     def __init__(self, container):
         self.container = container

@@ -10,32 +10,31 @@ def test_spawn_broker_and_worker_post_work(broker, worker_1, broker_client):
 def test_spawn_broker_worker_post_two_works(
         broker, worker_1, broker_client
 ):
-    broker_client.post_user_work('mkdir cool')
-    work_id = broker_client.post_user_work('ls')
-    response = broker_client.get_user_work_after_finish_with_success(work_id)
-    work = response.json()['work']
-    assert 'cool' in work['events'][2]['context']['output']
+    mkdir_work_id = broker_client.post_user_work('mkdir cool')
+    broker_client.get_user_work_after_finish_with_success(mkdir_work_id)
+    ls_work_id = broker_client.post_user_work('ls')
+    ls_work = broker_client.get_user_work_after_finish_with_success(ls_work_id)
+    assert 'cool' in ls_work['events'][2]['context']['output']
 
 
 def test_spawn_broker_three_workers_post_multiple_works(
-        client, network, broker, broker_client
+        client, broker, broker_client
 ):
     with auto_remove_multiple([
-        create_worker(client, network),
-        create_worker(client, network),
-        create_worker(client, network)
+        create_worker(client),
+        create_worker(client),
+        create_worker(client)
     ]) as workers_containers:
         number_of_works = 15
         work_ids = [broker_client.post_user_work('ls') for i in range(0, number_of_works)]
-        responses = [
-            broker_client.get_user_work_after_finish_with_success(work_id)
+        finished_works = [
+            broker_client.get_user_work_after_finish_with_success(work_id, timeout=20)
             for work_id in work_ids
-            ]
+        ]
         worker_ids = set(
-            response.json()['work']['events'][2]['context']['worker_id']
-            for response in responses
+            finished_work['events'][2]['context']['worker_id']
+            for finished_work in finished_works
         )
         assert len(worker_ids) == 3
 
-        print(b'BROKER' + broker.logs())
-        print(broker_client.get_user_works('test').json())
+

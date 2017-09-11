@@ -1,8 +1,3 @@
 {
-  "tests/test_broker.py::test_broker_is_responding": true,
-  "tests/test_broker_with_workers_and_works.py::test_spawn_broker_and_worker_post_work": true,
-  "tests/test_broker_with_workers_and_works.py::test_spawn_broker_three_workers_post_multiple_works": true,
-  "tests/test_broker_with_workers_and_works.py::test_spawn_broker_worker_post_two_works": true,
-  "tests/test_creating_and_killing_broker.py::test_create_broker_dispatch_work_restart_broker": true,
-  "tests/test_creating_and_killing_workers.py::test_create_work_kill_worker_add_worker": true
+  "tests/test_broker_with_workers_and_works.py::test_spawn_broker_three_workers_post_multiple_works": true
 }

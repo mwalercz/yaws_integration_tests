@@ -4,13 +4,16 @@ from configparser import SafeConfigParser
 import docker
 import os
 import pytest
+import urllib3
 from docker import APIClient
 
 from definitions import ROOT_DIR
 from utils.api import BrokerApiClient
-from utils.auto_remove import auto_remove_network, auto_remove
-from utils.containers_settings import BROKER_SETTINGS, POSTGRE_SETTINGS
+from utils.auto_remove import auto_remove
+from utils.containers_settings import BROKER_SETTINGS, POSTGRES_SETTINGS, WORKER_SETTINGS
 from utils.health_checks import wait_for_postgres, wait_for_broker
+
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
 def pytest_addoption(parser):
@@ -35,11 +38,6 @@ def broker_url(conf):
 
 
 @pytest.fixture
-def ports_exposed(conf):
-    return conf.getboolean('docker', 'ports_exposed')
-
-
-@pytest.fixture
 def broker_client(broker_url):
     return BrokerApiClient(broker_url=broker_url)
 
@@ -47,87 +45,55 @@ def broker_client(broker_url):
 @pytest.fixture(scope='session')
 def remove_all_containers():
     cli = APIClient(base_url='unix://var/run/docker.sock')
-    for container in cli.containers():
+    for container in cli.containers(all=True):
         cli.stop(container['Id'], timeout=2)
         cli.remove_container(container['Id'])
 
 
 @pytest.fixture
 def client(remove_all_containers):
-    return docker.from_env()
+    docker_client = docker.from_env()
+    docker_client.networks.prune()
+    docker_client.networks.create(
+        name='docker_net',
+        driver='bridge',
+    )
+    return docker_client
 
 
 @pytest.yield_fixture
-def network(client):
-    with auto_remove_network(
-            client.networks.create(
-                name=str(uuid.uuid4()),
-                driver='bridge'
-            )
-    ) as n:
-        yield n
-
-
-@pytest.yield_fixture
-def postgres(client, network, ports_exposed):
+def postgres(client):
     with auto_remove(
-            create_postgres(client, ports_exposed)
+            create_postgres(client)
     ) as c:
-        network.connect(c, aliases=['postgres'])
         wait_for_postgres(c)
         yield c
 
 
 @pytest.yield_fixture
-def broker(client, postgres, network, ports_exposed):
+def broker(client, postgres):
     with auto_remove(
-            create_broker(client, postgres, network, ports_exposed)
+            create_broker(client)
     ) as c:
         wait_for_broker(c)
         yield c
 
 
 @pytest.yield_fixture
-def worker_1(client, network):
+def worker_1(client, broker):
     with auto_remove(
-            create_worker(client, network)
+            create_worker(client)
     ) as c:
         yield c
 
 
-def create_worker(client, network):
-    container = client.containers.run(
-        'mwalercz/dq_worker',
-        command='worker -c env.ini',
-        environment={
-            'BROKER_URL': 'wss://broker:9000'
-        },
-        detach=True,
-    )
-    network.connect(container)
-    return container
+def create_worker(client):
+    return client.containers.run(**WORKER_SETTINGS)
 
 
-def create_broker(client, postgres, network, ports_exposed):
-    if ports_exposed:
-        broker_settings = BROKER_SETTINGS.copy()
-        broker_settings.update(dict(
-            ports={'9001/tcp': ('127.0.0.1', 9001)}
-        ))
-    else:
-        broker_settings = BROKER_SETTINGS
-    broker = client.containers.run(**broker_settings)
-    network.connect(broker, aliases=['broker'])
-    return broker
+def create_broker(client):
+    return client.containers.run(**BROKER_SETTINGS)
 
 
-def create_postgres(client, ports_exposed):
-    if ports_exposed:
-        postgre_settings = POSTGRE_SETTINGS.copy()
-        postgre_settings.update(dict(
-            ports={'5432/tcp': ('127.0.0.1', 5432)},
-        ))
-    else:
-        postgre_settings = POSTGRE_SETTINGS
-
-    return client.containers.run(**postgre_settings)
+def create_postgres(client):
+    return client.containers.run(**POSTGRES_SETTINGS)
