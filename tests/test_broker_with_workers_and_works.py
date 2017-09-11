@@ -32,7 +32,7 @@ def test_spawn_broker_three_workers_post_multiple_works(
             for work_id in work_ids
         ]
         worker_ids = set(
-            finished_work['events'][2]['context']['worker_id']
+            finished_work['events'][2]['context']['worker_socket']
             for finished_work in finished_works
         )
         assert len(worker_ids) == 3
