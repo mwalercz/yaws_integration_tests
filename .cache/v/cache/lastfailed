@@ -1,3 +1,1 @@
-{
-  "tests/test_broker_with_workers_and_works.py::test_spawn_broker_three_workers_post_multiple_works": true
-}
+{}

@@ -50,7 +50,7 @@ def remove_all_containers():
         cli.remove_container(container['Id'])
 
 
-@pytest.fixture
+@pytest.fixture(scope='session')
 def client(remove_all_containers):
     docker_client = docker.from_env()
     docker_client.networks.prune()
@@ -61,7 +61,7 @@ def client(remove_all_containers):
     return docker_client
 
 
-@pytest.yield_fixture
+@pytest.yield_fixture(scope='session')
 def postgres(client):
     with auto_remove(
             create_postgres(client)

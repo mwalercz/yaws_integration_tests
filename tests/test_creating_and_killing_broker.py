@@ -14,5 +14,4 @@ def test_create_broker_dispatch_work_restart_broker(broker, worker_1, broker_cli
         work_id=work_id,
         timeout=15,
     )
-    assert len(work['events']) > 3
     assert work['status'] == 'finished_with_success'

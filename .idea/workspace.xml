@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoTestManager">
-    <enabled-run-configurations>
-      <run-configuration type="tests" name="Rerun Failed Tests" />
-    </enabled-run-configurations>
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="ef2b5c5e-c23c-4dfc-8c84-4ed11aee296b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.cache/v/cache/lastfailed" afterPath="$PROJECT_DIR$/.cache/v/cache/lastfailed" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_creating_and_killing_broker.py" afterPath="$PROJECT_DIR$/tests/test_creating_and_killing_broker.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,10 +14,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/dq_integration_tests$py_test_in_test_spawn_broker_and_worker_post_work.coverage" NAME="py.test in test_spawn_broker_and_worker_post_work Coverage Results" MODIFIED="1502374828289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/dq_integration_tests$py_test_in_test_create_broker_dispatch_work_restart_broker.coverage" NAME="py.test in test_create_broker_dispatch_work_restart_broker Coverage Results" MODIFIED="1505161399610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/dq_integration_tests$tests.coverage" NAME="tests Coverage Results" MODIFIED="1505170362978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/dq_integration_tests$py_test_in_test_spawn_broker_three_workers_post_multiple_works.coverage" NAME="py.test in test_spawn_broker_three_workers_post_multiple_works Coverage Results" MODIFIED="1505168372141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/dq_integration_tests$py_test_in_test_create_broker_dispatch_work_restart_broker.coverage" NAME="py.test in test_create_broker_dispatch_work_restart_broker Coverage Results" MODIFIED="1506262924970" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/dq_integration_tests$py_test_in_test_spawn_broker_and_worker_post_work.coverage" NAME="py.test in test_spawn_broker_and_worker_post_work Coverage Results" MODIFIED="1506271672467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/dq_integration_tests$tests.coverage" NAME="tests Coverage Results" MODIFIED="1507486206863" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/dq_integration_tests$py_test_in_test_spawn_broker_three_workers_post_multiple_works.coverage" NAME="py.test in test_spawn_broker_three_workers_post_multiple_works Coverage Results" MODIFIED="1505389526992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/dq_integration_tests$py_test_in_test_ping_and_system_stats_py.coverage" NAME="py.test in test_ping_and_system_stats.py Coverage Results" MODIFIED="1502460984973" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/dq_integration_tests$py_test_in_test_broker_with_workers_py.coverage" NAME="py.test in test_broker_with_workers.py Coverage Results" MODIFIED="1500550751343" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/dq_integration_tests$py_test_in_test_broker_is_responding.coverage" NAME="py.test in test_broker_is_responding Coverage Results" MODIFIED="1502135524725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
@@ -29,7 +26,7 @@
     <SUITE FILE_PATH="coverage/dq_integration_tests$py_test_in_test_creating_and_killing_workers_py.coverage" NAME="py.test in test_creating_and_killing_workers.py Coverage Results" MODIFIED="1505161853104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/dq_integration_tests$py_test_in_test_broker_py.coverage" NAME="py.test in test_broker.py Coverage Results" MODIFIED="1501176493456" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/dq_integration_tests$py_test_in_test_creating_and_killing_broker_py.coverage" NAME="py.test in test_creating_and_killing_broker.py Coverage Results" MODIFIED="1505161803700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/dq_integration_tests$py_test_in_test_broker_with_workers_and_works_py.coverage" NAME="py.test in test_broker_with_workers_and_works.py Coverage Results" MODIFIED="1505168498651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/dq_integration_tests$py_test_in_test_broker_with_workers_and_works_py.coverage" NAME="py.test in test_broker_with_workers_and_works.py Coverage Results" MODIFIED="1505170633932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/dq_integration_tests$py_test_in_test_master_is_responding.coverage" NAME="py.test in test_master_is_responding Coverage Results" MODIFIED="1500645755493" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/dq_integration_tests$py_test_in_test_spawn_broker_worker_post_two_jobs.coverage" NAME="py.test in test_spawn_broker_worker_post_two_jobs Coverage Results" MODIFIED="1500548210205" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/dq_integration_tests$py_test_in_test_master_with_worker_and_one_job.coverage" NAME="py.test in test_master_with_worker_and_one_job Coverage Results" MODIFIED="1500543218084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
@@ -51,8 +48,8 @@
       <file leaf-file-name="test_broker_with_workers_and_works.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/test_broker_with_workers_and_works.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+            <state relative-caret-position="-303">
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -60,31 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scratch.json" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.json">
+      <file leaf-file-name="client.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.virtualenvs/dq_tests/lib/python3.6/site-packages/docker/api/client.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scratch.py" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.virtualenvs/dq_tests/lib64/python3.6/collections/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6498">
-              <caret line="362" column="52" lean-forward="false" selection-start-line="362" selection-start-column="52" selection-end-line="362" selection-end-column="52" />
+            <state relative-caret-position="3312">
+              <caret line="219" column="0" lean-forward="false" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -93,8 +70,8 @@
       <file leaf-file-name="test_creating_and_killing_broker.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/test_creating_and_killing_broker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+            <state relative-caret-position="288">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -112,7 +89,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_ping_and_system_stats.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test_ping_and_system_stats.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/test_ping_and_system_stats.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="54">
@@ -126,7 +103,29 @@
         <entry file="file://$PROJECT_DIR$/tests/test_broker.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="38" lean-forward="false" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="conftest.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/conftest.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="656">
+              <caret line="94" column="39" lean-forward="false" selection-start-line="94" selection-start-column="39" selection-end-line="94" selection-end-column="39" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="containers_settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/containers_settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -135,7 +134,7 @@
       <file leaf-file-name="api.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/api.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
+            <state relative-caret-position="648">
               <caret line="39" column="22" lean-forward="false" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="22" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
@@ -147,7 +146,7 @@
       <file leaf-file-name="decoder.py" pinned="false" current-in-tab="false">
         <entry file="file:///usr/lib64/python3.6/json/decoder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
+            <state relative-caret-position="6120">
               <caret line="342" column="18" lean-forward="false" selection-start-line="342" selection-start-column="18" selection-end-line="342" selection-end-column="18" />
               <folding />
             </state>
@@ -256,8 +255,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -269,10 +266,6 @@
               <option name="myItemId" value="External Libraries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Python 3.6.1 virtualenv at ~/.virtualenvs/dq_tests &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -281,20 +274,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="dq_integration_tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dq_integration_tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dq_integration_tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -314,12 +293,14 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Projects/time-tracker" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../dq_broker" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="SearchEverywhereHistoryKey" value="broker&#9;null&#9;null&#10;conf&#9;FILE&#9;file:///home/mwal/inz/dq/dq_integration_tests/tests/conftest.py&#10;test_b&#9;FILE&#9;file:///home/mwal/inz/dq/dq_integration_tests/tests/test_broker_with_workers.py&#10;uti&#9;FILE&#9;file:///home/mwal/inz/dq/dq_integration_tests/tests/utils.py&#10;docker&#9;ACTION&#9;ActivateDockerToolWindow&#10;depen&#9;null&#9;null" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="Python&#10;JSON" />
@@ -405,31 +386,6 @@
       <option name="USE_KEYWORD" value="true" />
       <method />
     </configuration>
-    <configuration default="false" name="py.test in test_creating_and_killing_broker.py" type="tests" factoryName="py.test" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="dq_integration_tests" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="testToRun" value="$PROJECT_DIR$/tests/test_creating_and_killing_broker.py" />
-      <option name="keywords" value="" />
-      <option name="params" value="" />
-      <option name="USE_PARAM" value="false" />
-      <option name="USE_KEYWORD" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="py.test in test_creating_and_killing_workers.py" type="tests" factoryName="py.test" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -453,6 +409,31 @@
       <option name="params" value="" />
       <option name="USE_PARAM" value="false" />
       <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="py.test in test_spawn_broker_and_worker_post_work" type="tests" factoryName="py.test" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="$USER_HOME$/.virtualenvs/dq_tests/bin/python3.6" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="dq_integration_tests" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="$PROJECT_DIR$/tests/test_broker_with_workers_and_works.py" />
+      <option name="keywords" value="test_spawn_broker_and_worker_post_work" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="BashConfigurationType" factoryName="Bash">
@@ -710,16 +691,16 @@
       <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in test_broker_with_workers_and_works.py" />
       <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in test_create_broker_dispatch_work_restart_broker" />
       <item index="3" class="java.lang.String" itemvalue="Python tests.py.test in test_spawn_broker_three_workers_post_multiple_works" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.py.test in test_creating_and_killing_broker.py" />
-      <item index="5" class="java.lang.String" itemvalue="Python tests.py.test in test_creating_and_killing_workers.py" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.py.test in test_creating_and_killing_workers.py" />
+      <item index="5" class="java.lang.String" itemvalue="Python tests.py.test in test_spawn_broker_and_worker_post_work" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in test_spawn_broker_three_workers_post_multiple_works" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in test_broker_with_workers_and_works.py" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in test_creating_and_killing_workers.py" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.py.test in test_creating_and_killing_broker.py" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.py.test in test_create_broker_dispatch_work_restart_broker" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in test_spawn_broker_and_worker_post_work" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in test_create_broker_dispatch_work_restart_broker" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in test_spawn_broker_three_workers_post_multiple_works" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.py.test in test_broker_with_workers_and_works.py" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.py.test in test_creating_and_killing_workers.py" />
       </list>
     </recent_temporary>
   </component>
@@ -740,34 +721,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="py_test_in_test_broker_with_workers_and_works_py - 2017.09.12 at 00h 16m 30s.xml">
-      <configuration name="py.test in test_broker_with_workers_and_works.py" configurationId="tests" />
+    <history-entry file="py_test_in_test_create_broker_dispatch_work_restart_broker - 2017.09.24 at 16h 12m 36s.xml">
+      <configuration name="py.test in test_create_broker_dispatch_work_restart_broker" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_broker_with_workers_and_works_py - 2017.09.12 at 00h 17m 39s.xml">
-      <configuration name="py.test in test_broker_with_workers_and_works.py" configurationId="tests" />
+    <history-entry file="py_test_in_test_create_broker_dispatch_work_restart_broker - 2017.09.24 at 16h 20m 01s.xml">
+      <configuration name="py.test in test_create_broker_dispatch_work_restart_broker" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_broker_with_workers_and_works_py - 2017.09.12 at 00h 21m 43s.xml">
-      <configuration name="py.test in test_broker_with_workers_and_works.py" configurationId="tests" />
+    <history-entry file="py_test_in_test_create_broker_dispatch_work_restart_broker - 2017.09.24 at 16h 20m 30s.xml">
+      <configuration name="py.test in test_create_broker_dispatch_work_restart_broker" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_spawn_broker_three_workers_post_multiple_works - 2017.09.11 at 23h 18m 36s.xml">
-      <configuration name="py.test in test_spawn_broker_three_workers_post_multiple_works" configurationId="tests" />
+    <history-entry file="py_test_in_test_create_broker_dispatch_work_restart_broker - 2017.09.24 at 16h 22m 36s.xml">
+      <configuration name="py.test in test_create_broker_dispatch_work_restart_broker" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_spawn_broker_three_workers_post_multiple_works - 2017.09.11 at 23h 19m 32s.xml">
-      <configuration name="py.test in test_spawn_broker_three_workers_post_multiple_works" configurationId="tests" />
+    <history-entry file="py_test_in_test_spawn_broker_and_worker_post_work - 2017.09.24 at 18h 26m 53s.xml">
+      <configuration name="py.test in test_spawn_broker_and_worker_post_work" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_spawn_broker_three_workers_post_multiple_works - 2017.09.12 at 00h 15m 24s.xml">
-      <configuration name="py.test in test_spawn_broker_three_workers_post_multiple_works" configurationId="tests" />
+    <history-entry file="py_test_in_test_spawn_broker_and_worker_post_work - 2017.09.24 at 18h 35m 02s.xml">
+      <configuration name="py.test in test_spawn_broker_and_worker_post_work" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_spawn_broker_three_workers_post_multiple_works - 2017.09.12 at 00h 15m 30s.xml">
-      <configuration name="py.test in test_spawn_broker_three_workers_post_multiple_works" configurationId="tests" />
+    <history-entry file="py_test_in_test_spawn_broker_and_worker_post_work - 2017.09.24 at 18h 47m 49s.xml">
+      <configuration name="py.test in test_spawn_broker_and_worker_post_work" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_spawn_broker_three_workers_post_multiple_works - 2017.09.12 at 00h 19m 14s.xml">
-      <configuration name="py.test in test_spawn_broker_three_workers_post_multiple_works" configurationId="tests" />
+    <history-entry file="py_test_in_test_spawn_broker_and_worker_post_work - 2017.09.24 at 18h 48m 15s.xml">
+      <configuration name="py.test in test_spawn_broker_and_worker_post_work" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_spawn_broker_three_workers_post_multiple_works - 2017.09.12 at 00h 21m 48s.xml">
-      <configuration name="py.test in test_spawn_broker_three_workers_post_multiple_works" configurationId="tests" />
+    <history-entry file="tests - 2017.09.24 at 18h 26m 25s.xml">
+      <configuration name="tests" configurationId="tests" />
     </history-entry>
-    <history-entry file="tests - 2017.09.12 at 00h 24m 56s.xml">
+    <history-entry file="tests - 2017.09.24 at 18h 50m 31s.xml">
       <configuration name="tests" configurationId="tests" />
     </history-entry>
   </component>
@@ -779,12 +760,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5148206" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917318" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46957877" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50078005" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39453125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5475819" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5007776" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41328126" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47122863" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917318" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3400936" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39937598" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -793,6 +774,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3400936" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -851,13 +833,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/tests/test_creating_and_killing_broker.py</url>
-          <line>17</line>
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tests/test_creating_and_killing_broker.py</url>
           <line>16</line>
-          <option name="timeStamp" value="47" />
+          <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/tests/test_broker.py</url>
@@ -894,11 +871,21 @@
           <line>30</line>
           <option name="timeStamp" value="77" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_broker_with_workers_and_works.py</url>
+          <line>27</line>
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_broker_with_workers_and_works.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="81" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="78" />
+      <option name="time" value="82" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1013,13 +1000,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/dq_tests/lib/python3.6/site-packages/docker/api/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="219" column="0" lean-forward="false" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/lib64/python3.6/urllib/parse.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
@@ -1128,33 +1108,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/conftest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/containers_settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="43" lean-forward="false" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/auto_remove.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="11" lean-forward="false" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_broker.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1162,7 +1119,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1170,7 +1126,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1178,25 +1133,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6498">
           <caret line="362" column="52" lean-forward="false" selection-start-line="362" selection-start-column="52" selection-end-line="362" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file:///usr/lib64/python3.6/json/decoder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
+        <state relative-caret-position="6120">
           <caret line="342" column="18" lean-forward="false" selection-start-line="342" selection-start-column="18" selection-end-line="342" selection-end-column="18" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_creating_and_killing_broker.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1210,20 +1154,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/api.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
+        <state relative-caret-position="648">
           <caret line="39" column="22" lean-forward="false" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="22" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_broker_with_workers_and_works.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1233,6 +1167,60 @@
         <state relative-caret-position="54">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_broker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="38" lean-forward="false" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/containers_settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/dq_tests/lib/python3.6/site-packages/docker/api/client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3312">
+          <caret line="219" column="0" lean-forward="false" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_creating_and_killing_broker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_broker_with_workers_and_works.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-303">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/conftest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="656">
+          <caret line="94" column="39" lean-forward="false" selection-start-line="94" selection-start-column="39" selection-end-line="94" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
