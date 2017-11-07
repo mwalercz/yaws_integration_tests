@@ -6,5 +6,5 @@ git+git://github.com/docker/docker-py.git@2.4.2-release
 cryptography
 pyOpenSSL==17.2.0
 requests==2.18.1
-
+pytest-bdd==2.19.0
 

@@ -62,16 +62,16 @@ class BrokerApiClient:
 
         raise Exception('Timeout!')
 
-    def get_user_work_after_finish_with_success(self, work_id, user='test', timeout=5):
+    def get_user_work_with_status(
+            self, work_id, user='test', timeout=5, status='finished_with_success'
+    ):
         return self.make_request_until(
             method='GET',
             path='/users/{user}/works/{work_id}'.format(
                 user=user,
                 work_id=work_id,
             ),
-            fun=lambda response: response.json()['status'] == (
-                'finished_with_success'
-            ),
+            fun=lambda response: response.json()['status'] == status,
             timeout=timeout,
         ).json()
 

@@ -12,7 +12,7 @@ def test_create_work_kill_worker_add_worker(client, broker, broker_client):
         sleep(1)
 
     with auto_remove(create_worker(client)):
-        work = broker_client.get_user_work_after_finish_with_success(
+        work = broker_client.get_user_work_with_status(
             work_id,
             timeout=10,
         )

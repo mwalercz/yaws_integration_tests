@@ -70,7 +70,7 @@ def postgres(client):
         yield c
 
 
-@pytest.yield_fixture
+@pytest.yield_fixture(scope='session')
 def broker(client, postgres):
     with auto_remove(
             create_broker(client)
