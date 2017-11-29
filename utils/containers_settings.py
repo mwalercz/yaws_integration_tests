@@ -1,7 +1,7 @@
 BROKER_SETTINGS = dict(
-    image='mwalercz/dq_broker',
+    image='dist-queue/dq-broker',
     name='broker',
-    command='broker -c env.ini',
+    command='dq-broker -c env.ini',
     environment={
         'BROKER_DATABASE_HOSTNAME': 'postgres',
         'BROKER_WEBSOCKET_PING_INTERVAL': '1',
@@ -32,11 +32,11 @@ POSTGRES_SETTINGS = dict(
 )
 
 WORKER_SETTINGS = dict(
-    image='mwalercz/dq_worker',
-    command='worker -c env.ini',
+    image='dist-queue/dq-worker',
+    command='dq-worker -c env.ini',
     environment={
         'BROKER_URL': 'wss://broker:9000',
-        'SSH_HOST': '127.0.0.1',
+        # 'SSH_HOST': '127.0.0.1',
     },
     network_mode='bridge',
     links=[('broker', 'broker')],

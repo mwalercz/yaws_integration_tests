@@ -1,4 +1,3 @@
-import uuid
 from configparser import SafeConfigParser
 
 import docker
@@ -23,7 +22,7 @@ def pytest_addoption(parser):
     )
 
 
-@pytest.fixture
+@pytest.fixture(scope='session')
 def conf(request):
     conf_name = request.config.getoption("--settings")
     conf_path = os.path.join(ROOT_DIR, 'conf', conf_name)
@@ -32,12 +31,12 @@ def conf(request):
     return parser
 
 
-@pytest.fixture
+@pytest.fixture(scope='session')
 def broker_url(conf):
     return conf.get('broker', 'url')
 
 
-@pytest.fixture
+@pytest.fixture(scope='session')
 def broker_client(broker_url):
     return BrokerApiClient(broker_url=broker_url)
 
@@ -71,11 +70,15 @@ def postgres(client):
 
 
 @pytest.yield_fixture(scope='session')
-def broker(client, postgres):
+def broker(broker_client, client, postgres):
     with auto_remove(
             create_broker(client)
     ) as c:
         wait_for_broker(c)
+        broker_client.post_user(
+            username='test',
+            is_admin=False,
+        )
         yield c
 
 

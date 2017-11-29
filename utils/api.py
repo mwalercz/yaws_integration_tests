@@ -118,3 +118,14 @@ class BrokerApiClient:
             ),
             headers=headers,
         ).json()
+
+    def post_user(self, username, is_admin=False, headers=ADMIN_USER_HEADERS):
+        return self.make_request(
+            'POST',
+            '/users',
+            headers=headers,
+            json={
+                'username': username,
+                'is_admin': is_admin
+            }
+        ).json()
