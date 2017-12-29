@@ -85,7 +85,7 @@ class BrokerApiClient:
                 'env': {},
             }
         )
-        assert response.status_code == 202
+        assert response.status_code == 200
         return response.json()['work_id']
 
     def get_user_works(self, user='test'):

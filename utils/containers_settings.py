@@ -5,7 +5,8 @@ BROKER_SETTINGS = dict(
     environment={
         'BROKER_DATABASE_HOSTNAME': 'postgres',
         'BROKER_WEBSOCKET_PING_INTERVAL': '1',
-        'BROKER_WEBSOCKET_PING_TIMEOUT': '1'
+        'BROKER_WEBSOCKET_PING_TIMEOUT': '1',
+        'BROKER_DEFAULT_ADMIN_USERNAME': 'admin',
     },
     detach=True,
     network_mode='bridge',
