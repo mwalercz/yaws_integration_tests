@@ -1,32 +1,40 @@
 from time import sleep
+from typing import NamedTuple
 from urllib.parse import urljoin
 
 import requests
+from requests.auth import HTTPBasicAuth
+
+
+class Credentials(NamedTuple):
+    username: str
+    password: str
 
 
 class BrokerApiClient:
-    TEST_USER_HEADERS = {'username': 'test', 'password': 'test'}
-    ADMIN_USER_HEADERS = {'username': 'admin', 'password': 'admin'}
+    TEST_USER_CREDENTIALS = Credentials(username='test', password='test')
+    ADMIN_USER_CREDENTIALS = Credentials(username='admin', password='admin')
 
     def __init__(self, broker_url):
         self.broker_url = broker_url
 
-    def make_request(self, method, path, headers=None, json=None):
+    def make_request(self, method, path, credentials=None, json=None):
         url = urljoin(self.broker_url, path)
-        headers = headers or self.TEST_USER_HEADERS
+        credentials = credentials or self.TEST_USER_CREDENTIALS
+        auth = HTTPBasicAuth(credentials.username, credentials.password)
         print(
             'Request to broker:\n'
-            'url:: {}\n'
-            'headers: {}\n'
+            'url: {}\n'
+            'credentials: {}\n'
             'method: {}\n'
-            'json: {}\n'.format(
-                url, headers, method, json
+            'json: {}'.format(
+                url, credentials, method, json
             )
         )
         response = requests.request(
             method=method,
             url=url,
-            headers=headers,
+            auth=auth,
             verify=False,
             json=json
         )
@@ -37,13 +45,13 @@ class BrokerApiClient:
         )
         return response
 
-    def make_request_with_retries(self, method, path, headers=None, json=None, timeout=10, delay=1):
+    def make_request_with_retries(self, method, path, credentials=None, json=None, timeout=10, delay=1):
         for i in range(0, int(timeout / delay)):
             try:
                 return self.make_request(
                     method=method,
                     path=path,
-                    headers=headers,
+                    credentials=credentials,
                     json=json
                 )
             except requests.exceptions.SSLError as exc:
@@ -51,11 +59,11 @@ class BrokerApiClient:
                 sleep(delay)
 
     def make_request_until(
-            self, method, path, fun, headers=None,
+            self, method, path, fun, credentials=None,
             json=None, timeout=10, delay=1
     ):
         for i in range(0, int(timeout / delay)):
-            response = self.make_request(method, path, headers, json)
+            response = self.make_request(method, path, credentials, json)
             if fun(response):
                 return response
             sleep(delay)
@@ -103,27 +111,27 @@ class BrokerApiClient:
             )
         ).json()
 
-    def get_workers(self, headers=ADMIN_USER_HEADERS):
+    def get_workers(self, credentials=ADMIN_USER_CREDENTIALS):
         return self.make_request(
             'GET',
             '/workers',
-            headers=headers,
+            credentials=credentials,
         ).json()
 
-    def get_worker(self, worker_id, headers=ADMIN_USER_HEADERS):
+    def get_worker(self, worker_id, credentials=ADMIN_USER_CREDENTIALS):
         return self.make_request(
             'GET',
             '/workers/{worker_id}'.format(
                 worker_id=worker_id
             ),
-            headers=headers,
+            credentials=credentials,
         ).json()
 
-    def post_user(self, username, is_admin=False, headers=ADMIN_USER_HEADERS):
+    def post_user(self, username, is_admin=False, credentials=ADMIN_USER_CREDENTIALS):
         return self.make_request(
             'POST',
             '/users',
-            headers=headers,
+            credentials=credentials,
             json={
                 'username': username,
                 'is_admin': is_admin
