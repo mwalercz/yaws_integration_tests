@@ -17,7 +17,7 @@ def read_requirements(filename):
     return contents.split('\n') if contents else []
 
 setup(
-    name="dq_integration_tests",
+    name="yaws_integration_tests",
     version="0.0.1",
     author="Maciej Walerczuk",
     author_email="mwalerczuk@gmail.com",

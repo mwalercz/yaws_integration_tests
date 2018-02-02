@@ -60,7 +60,7 @@ class BrokerApiClient:
 
     def make_request_until(
             self, method, path, fun, credentials=None,
-            json=None, timeout=10, delay=1
+            json=None, timeout=10, delay=1.0
     ):
         for i in range(0, int(timeout / delay)):
             response = self.make_request(method, path, credentials, json)
@@ -75,7 +75,7 @@ class BrokerApiClient:
     ):
         return self.make_request_until(
             method='GET',
-            path='/users/{user}/works/{work_id}'.format(
+            path='/works/{work_id}'.format(
                 user=user,
                 work_id=work_id,
             ),
@@ -86,7 +86,7 @@ class BrokerApiClient:
     def post_user_work(self, command, cwd='/home/test', user='test'):
         response = self.make_request(
             'POST',
-            '/users/{user}/works'.format(user=user),
+            '/works'.format(user=user),
             json={
                 'command': command,
                 'cwd': cwd,
@@ -99,13 +99,13 @@ class BrokerApiClient:
     def get_user_works(self, user='test'):
         return self.make_request(
             'GET',
-            '/users/{user}/works'.format(user=user)
+            '/works'.format(user=user)
         )
 
     def get_user_work(self, work_id, user='test'):
         return self.make_request(
             'GET',
-            '/users/{user}/works/{work_id}'.format(
+            '/works/{work_id}'.format(
                 user=user,
                 work_id=work_id
             )
