@@ -16,5 +16,5 @@ def test_create_work_kill_worker_add_worker(client, broker, broker_client):
             work_id,
             timeout=10,
         )
-        assert work['status'] == 'finished_with_success'
+        assert work['status'] == 'FINISHED'
         assert len(work['events']) > 3

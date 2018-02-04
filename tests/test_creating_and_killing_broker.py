@@ -14,7 +14,7 @@ def test_create_broker_dispatch_work_restart_broker(broker, worker_1, broker_cli
         work_id=work_id,
         timeout=15,
     )
-    assert work['status'] == 'finished_with_success'
+    assert work['status'] == 'FINISHED'
 
 
 def test_create_broker_restart_broker(
@@ -28,7 +28,7 @@ def test_create_broker_restart_broker(
     work = broker_client.get_user_work_with_status(
         work_id=work_id,
         timeout=15,
-        status='unknown',
+        status='UNKNOWN',
     )
-    assert work['status'] == 'unknown'
+    assert work['status'] == 'UNKNOWN'
 

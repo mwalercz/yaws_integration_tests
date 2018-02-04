@@ -1,7 +1,7 @@
 BROKER_SETTINGS = dict(
     image='dist-queue/yawsm',
     name='yawsm',
-    command='yawsm -c env.ini',
+    command='yawsm -c env.cfg',
     environment={
         'YAWSM_DATABASE_HOSTNAME': 'postgres',
         'YAWSM_WEBSOCKET_PING_INTERVAL': '1',
@@ -34,7 +34,7 @@ POSTGRES_SETTINGS = dict(
 
 WORKER_SETTINGS = dict(
     image='dist-queue/yawsd',
-    command='yawsd -c env.ini',
+    command='yawsd -c env.cfg',
     environment={
         'BROKER_URL': 'wss://yawsm:9000',
         # 'SSH_HOST': '127.0.0.1',

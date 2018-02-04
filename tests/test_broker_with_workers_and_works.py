@@ -11,10 +11,10 @@ def test_spawn_broker_worker_post_two_works(
         broker, worker_1, broker_client
 ):
     mkdir_work_id = broker_client.post_user_work('mkdir cool')
-    broker_client.get_user_work_with_status(mkdir_work_id)
+    mkdir_work = broker_client.get_user_work_with_status(mkdir_work_id)
     ls_work_id = broker_client.post_user_work('ls')
     ls_work = broker_client.get_user_work_with_status(ls_work_id)
-    assert 'cool' in ls_work['events'][2]['context']['output']
+    assert 'cool' in ls_work['output']
 
 
 def test_spawn_broker_three_workers_post_multiple_works(

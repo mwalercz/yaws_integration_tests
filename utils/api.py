@@ -71,7 +71,7 @@ class BrokerApiClient:
         raise Exception('Timeout!')
 
     def get_user_work_with_status(
-            self, work_id, user='test', timeout=5, status='finished_with_success'
+            self, work_id, user='test', timeout=5, status='FINISHED'
     ):
         return self.make_request_until(
             method='GET',

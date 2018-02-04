@@ -18,7 +18,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 def pytest_addoption(parser):
     parser.addoption(
         "--settings", action="store",
-        default="develop.ini", help="config name"
+        default="develop.cfg", help="config name"
     )
 
 
